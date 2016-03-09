@@ -1,8 +1,10 @@
 package com.yihukurama.lcontroler.view.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -52,6 +54,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     break;
                 }
                 showToastLong("验证成功！");
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0); //强制隐藏键盘
                 unlockBtn.setVisibility(View.GONE);
                 editText.setVisibility(View.GONE);
                 text2.setVisibility(View.GONE);
@@ -63,13 +67,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Intent intent = new Intent(MainActivity.this,
                         ArticleActivity.class);
                 startActivity(intent);
-                finish();
+
                 break;
             case R.id.btn_music:
                 Intent intent1 = new Intent(MainActivity.this,
                         MusicActivity.class);
                 startActivity(intent1);
-                finish();
+
                 break;
         }
     }

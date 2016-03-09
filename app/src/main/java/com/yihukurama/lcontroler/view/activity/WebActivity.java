@@ -67,7 +67,7 @@ public class WebActivity extends BaseActivity {
             }
             else
             {
-                System.exit(0);
+                finish();
             }
         }
         return super.onKeyDown(keyCode, event);

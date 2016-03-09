@@ -35,13 +35,13 @@ public class MusicActivity extends BaseActivity implements View.OnClickListener{
                 Intent intent = new Intent(MusicActivity.this,
                         WebActivity.class);
                 startActivity(intent);
-                finish();
+
                 break;
             case R.id.btn_pre:
                 Intent intent1 = new Intent(MusicActivity.this,
                         WebActivity.class);
                 startActivity(intent1);
-                finish();
+
                 break;
 
         }
