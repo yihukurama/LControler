@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yihukurama.lcontroler.BaseActivity;
 import com.yihukurama.lcontroler.R;
 
 //前奏 主歌 副歌 间奏 主歌 副歌 副歌 尾奏

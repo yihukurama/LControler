@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.yihukurama.lcontroler.BaseActivity;
 import com.yihukurama.lcontroler.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {

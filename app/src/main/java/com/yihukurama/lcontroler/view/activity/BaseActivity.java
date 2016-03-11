@@ -1,8 +1,10 @@
-package com.yihukurama.lcontroler;
+package com.yihukurama.lcontroler.view.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.yihukurama.lcontroler.R;
 
 public class BaseActivity extends AppCompatActivity {
 

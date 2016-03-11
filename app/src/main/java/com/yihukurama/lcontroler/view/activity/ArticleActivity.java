@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yihukurama.lcontroler.BaseActivity;
 import com.yihukurama.lcontroler.R;
 //文章
 public class ArticleActivity extends BaseActivity implements View.OnClickListener {
