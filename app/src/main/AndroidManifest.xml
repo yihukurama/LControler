@@ -10,18 +10,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activity.BaseActivity" />
-        <activity android:name=".view.activity.MainActivity">
+        <activity android:name=".view.activity.base.BaseActivity" />
+        <activity android:name=".view.activity.MainActivity" />
+        <activity android:name=".view.activity.WebActivity" />
+        <activity android:name=".view.activity.LGameActivity" />
+        <activity android:name=".view.activity.RegisterActivity" />
+        <activity android:name=".view.activity.LockActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.WebActivity" />
-        <activity android:name=".view.activity.MusicActivity" />
-        <activity android:name=".view.activity.ArticleActivity" />
-        <activity android:name=".view.activity.RegisterActivity"></activity>
+        <activity android:name=".view.activity.UserInfoActivity"></activity>
     </application>
 
 </manifest>

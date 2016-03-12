@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">由戏</string>
+    <string name="app_name">游戏</string>
+
+
+    <string name="string0">银行</string>
+    <string name="string1">卡券</string>
+    <string name="string2">承诺劵</string>
+    <string name="string3">游戏</string>
+    <string name="string4">商城</string>
+
+    <string name="nickCanntNull">昵称不能为空</string>
+    <string name="emailboxError">邮箱格式不正确</string>
+    <!-- 时间 -->
+    <string name="time_today">今天  </string>
+    <string name="time_yesterday">昨天  </string>
+    <string name="time_day_beforeyesterday">前天  </string>
+    <string name="time_mon">个月前</string>
+    <string name="time_year">年前</string>
+    <string name="time_day">天前</string>
+    <string name="time_hour">小时前</string>
+    <string name="time_min">分钟前</string>
+    <string name="time_justnow">刚刚</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
 </resources>

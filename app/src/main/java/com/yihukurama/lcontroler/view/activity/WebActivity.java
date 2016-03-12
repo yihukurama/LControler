@@ -8,6 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.yihukurama.lcontroler.R;
+import com.yihukurama.lcontroler.view.activity.base.BaseActivity;
 
 public class WebActivity extends BaseActivity {
     private WebView webView;

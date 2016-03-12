@@ -7,23 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".view.activity.MusicActivity">
+    tools:context=".view.activity.LGameActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="前奏"
-        android:id="@+id/btn_pre"
-        android:layout_marginTop="126dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="主歌"
+        android:text="随机开始"
         android:id="@+id/btn_main"
-        android:layout_below="@+id/btn_pre"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="81dp" />
+        android:layout_marginTop="162dp" />
 </RelativeLayout>
