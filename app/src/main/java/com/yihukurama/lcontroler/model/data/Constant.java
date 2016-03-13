@@ -5,4 +5,8 @@ package com.yihukurama.lcontroler.model.data;
  */
 public class Constant {
     public static String DB_NAME = "lcontroler";
+
+    public static String ACCOUNTKEY = "account";
+    public static String ACCESSTOKEN = "accesstoken";
+    public static String CACHENULL = "noValue";
 }

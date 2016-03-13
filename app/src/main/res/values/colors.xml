@@ -4,7 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-
+    <color name="btn_register_normal">#ffffff</color>
+    <color name="btn_register_pressed">#00acff</color>
         <color name="bg_color">#EDEDED</color>
         <color name="contents_text">#ff000000</color>
         <color name="encode_view">#ffffffff</color>

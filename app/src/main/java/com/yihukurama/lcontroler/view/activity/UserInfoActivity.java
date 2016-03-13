@@ -125,9 +125,7 @@ public class UserInfoActivity extends BaseActivity implements InitActivityInterf
 
 
                 //所有信息存入数据库并上传服务器
-                User user = new User();
                 user.setNickname(nicknameEdit.getText().toString());
-                user.setUserid("0");
                 DBManager.getInstance(context).getDaoSession().insertOrReplace(user);
                 showToastShort("保存成功");
                 break;
