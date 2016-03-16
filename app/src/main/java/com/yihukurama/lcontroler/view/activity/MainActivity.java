@@ -8,14 +8,18 @@ import android.widget.TextView;
 
 import com.yihukurama.lcontroler.LControlerApplication;
 import com.yihukurama.lcontroler.R;
-import com.yihukurama.lcontroler.model.access.greendao.User;
+import com.yihukurama.lcontroler.control.sdk.imageloader.ImageLoaderApi;
 import com.yihukurama.lcontroler.view.activity.base.BaseActivity;
+import com.yihukurama.lcontroler.view.widget.RoundImageView;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     Button articleBtn;
     Button headIconBtn;
     TextView nickNameTV;
+    RoundImageView headView;
+    String nickName;
+    String headUrl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         initData();
     }
     private void initView() {
-
+        headView = (RoundImageView)findViewById(R.id.AIF_headIcon_iv);
         articleBtn = (Button)findViewById(R.id.btn_game);
         headIconBtn = (Button)findViewById(R.id.AIF_headIcon_btn);
         nickNameTV = (TextView)findViewById(R.id.AIF_name_tv);
@@ -34,18 +38,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         articleBtn.setOnClickListener(this);
         headIconBtn.setOnClickListener(this);
+        //访问服务器获取数据，并更新本地缓存
 
     }
-    private void refreshUI(){
-        nickNameTV.setText(user.getNickname());
+    protected void refreshUI(){
+        user = LControlerApplication.getUser();
+        nickName = user.getNickname();
+        headUrl = user.getHeadurl();
+        nickNameTV.setText(nickName);
+        ImageLoaderApi.getInstance().displayImage(headUrl, headView);
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        refreshUI();
-    }
-
 
     @Override
     public void onClick(View v) {
@@ -63,4 +65,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
         }
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        refreshUI();
+    }
+
 }

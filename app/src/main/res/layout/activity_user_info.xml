@@ -1,273 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/MPS_rl_chooseall"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF8F8F8"
-    android:orientation="vertical" >
-
-    <ScrollView
+    android:background="#eff2f6"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <RelativeLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fadingEdge="none"
-        android:scrollbars="none" >
+        android:layout_height="46dp"
+        android:background="@color/btn_register_pressed"
+        android:gravity="center_vertical" >
 
-        <LinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人信息"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/set_usericon"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <ImageView
+                android:id="@+id/MPS_iv_userportrait"
+                android:layout_width="90dip"
+                android:layout_height="90dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="8dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/em_default_avatar"
+                />
+            <ImageView
+                android:id="@+id/user_head_headphoto_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/MPS_iv_userportrait"
+                android:layout_alignBottom="@+id/MPS_iv_userportrait"
+                android:layout_alignRight="@+id/MPS_iv_userportrait"
+                android:layout_margin="1dip"
+                android:src="@drawable/em_profile_headphoto_update_icon"
+                />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/MPS_iv_userportrait"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/user_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_pressed"
+
+            />
+        <RelativeLayout
+            android:id="@+id/rl_nickname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <RelativeLayout
-                android:id="@+id/MPS_rl_usericon"
-                android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dip"
+            >
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn"
-                android:padding="12dp" >
-
-                <com.yihukurama.lcontroler.view.widget.RoundImageView
-                    android:id="@+id/MPS_iv_userportrait"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="40dp"
-                    android:background="@drawable/icheck_product_login_portrail"
-                    android:scaleType="centerCrop"
-                    app:type="circle" />
-
-                <RelativeLayout
-                    android:id="@+id/MPS_rl_loading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" >
-
-                    <com.yihukurama.lcontroler.view.widget.RoundImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/translucent_99_black"
-                        app:type="circle" />
-
-                    <ProgressBar
-                        android:id="@+id/progressBar1"
-                        style="?android:attr/progressBarStyleSmall"
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:id="@+id/MPS_tv_loading"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:text="0%"
-                        android:textColor="@color/white"
-                        android:textSize="12sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/MPS_rl_err"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" >
-
-                    <com.yihukurama.lcontroler.view.widget.RoundImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/translucent_99_white"
-                        app:type="circle" />
-
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:background="@color/translucent_99_white"
-                        android:padding="12dp"
-                        android:src="@drawable/chat_btn_fail_resend" />
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/MPS_tv_usericonname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@+id/MPS_iv_userportrait"
-                    android:text="头像"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/shallow_black"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/commodity_finsh" />
-            </RelativeLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/divider_list" >
-            </FrameLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="12dp"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:orientation="vertical" >
-
-                <EditText
-                    android:id="@+id/MPS_editTxt_nicename"
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:background="@drawable/bg_edittext"
-                    android:hint="昵称"
-                    android:maxLength="20"
-                    android:paddingLeft="10dp"
-                    android:singleLine="true"
-                    android:textSize="14sp" >
-                </EditText>
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp" >
-
-                <RadioGroup
-                    android:id="@+id/MPS_radioGroup_sex"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <RadioButton
-                        android:id="@+id/MPS_radioboy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/round_radio_selector"
-                        android:button="@null"
-                        android:checked="true" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="男"
-                        android:textColor="@color/shallow_black" />
-
-                    <RadioButton
-                        android:id="@+id/MPS_radiogirl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="78dp"
-                        android:background="@drawable/round_radio_selector"
-                        android:button="@null" />
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:text="女"
-                        android:textColor="@color/shallow_black" />
-                </RadioGroup>
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_margin="10dp"
+                android:layout_alignParentLeft="true"
+                android:text="昵称"
+                android:textSize="16sp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:textColor="#808080"
+                android:background="#FFFFFF"
+                android:id="@+id/textView" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="选择生日"
-                    android:textColor="@color/shallow_black" />
+            <EditText
+                android:id="@+id/user_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dip"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="#000"
+                android:background="@null"
+                android:hint="我的昵称"
+                android:singleLine="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignTop="@+id/textView"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
 
-                <RelativeLayout
-                    android:id="@+id/MPS_rl_year"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/sagittate"
-                    android:gravity="center" >
-
-                    <TextView
-                        android:id="@+id/MPS_tv_yeartext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="4dp"
-                        android:text="年"
-                        android:textColor="@color/shallow_black"
-                        android:textSize="12sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/MPS_rl_month"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/sagittate"
-                    android:gravity="center" >
-
-                    <TextView
-                        android:id="@+id/MPS_tv_monthtext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="4dp"
-                        android:text="月"
-                        android:textColor="@color/shallow_black"
-                        android:textSize="12sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/MPS_rl_day"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/sagittate"
-                    android:gravity="center" >
-
-                    <TextView
-                        android:id="@+id/MPS_tv_daytext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="4dp"
-                        android:text="日"
-                        android:textColor="@color/shallow_black"
-                        android:textSize="12sp" />
-                </RelativeLayout>
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/MPS_btn_ok"
-                style="@style/button_next_step_blue"
-                android:layout_margin="12dp"
-                android:text="保存" />
-        </LinearLayout>
-    </ScrollView>
+    <Button
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:id="@+id/save"
+        style="@style/button_next_step_blue" />
 
 </LinearLayout>

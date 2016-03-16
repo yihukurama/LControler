@@ -82,7 +82,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:paddingRight="5dp"
-                            android:text="存款"
+                            android:text="个性签名"
                             android:textColor="@color/text_color"
                             android:textSize="13sp" />
 

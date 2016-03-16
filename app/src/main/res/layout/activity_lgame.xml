@@ -10,11 +10,13 @@
     tools:context=".view.activity.LGameActivity">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="随机开始"
         android:id="@+id/btn_main"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="162dp" />
+        style="@style/button_next_step_blue"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />/>
 </RelativeLayout>

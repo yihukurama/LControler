@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.yihukurama.lcontroler.control.sdk.imageloader.ImageLoaderApi;
 import com.yihukurama.lcontroler.model.access.greendao.User;
 import com.yihukurama.lcontroler.model.data.Constant;
 
@@ -30,8 +31,10 @@ public class LControlerApplication extends Application {
         //给User一些默认的值
         user = new User("15914865707");
         user.setNickname("昵称");
-        context = getContext();
-        appCache = getSharedPreferences("LControler",Context.MODE_PRIVATE);
+        context = getApplicationContext();
+        appCache = getSharedPreferences("LControler", Context.MODE_PRIVATE);
+        ImageLoaderApi.initImageLoader(context);
+
 
     }
 
