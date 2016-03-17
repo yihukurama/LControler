@@ -9,6 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.activity.LGameActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="         我希望\n   和你一起解锁\n所有关于爱的关卡"
+        android:textSize="30dp"
+        android:layout_marginTop="153dp"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +26,7 @@
         style="@style/button_next_step_blue"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />/>
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="123dp" />/>
 </RelativeLayout>

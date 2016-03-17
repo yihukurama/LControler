@@ -46,7 +46,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         nickName = user.getNickname();
         headUrl = user.getHeadurl();
         nickNameTV.setText(nickName);
-        ImageLoaderApi.getInstance().displayImage(headUrl, headView);
+        if(headUrl!=null && headUrl!="")
+            ImageLoaderApi.getInstance().displayImage(headUrl, headView);
     }
 
     @Override

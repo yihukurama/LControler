@@ -1,12 +1,5 @@
 <resources>
-    <string name="app_name">游戏</string>
-
-
-    <string name="string0">银行</string>
-    <string name="string1">卡券</string>
-    <string name="string2">承诺劵</string>
-    <string name="string3">游戏</string>
-    <string name="string4">商城</string>
+    <string name="app_name">爱情银行</string>
 
     <string name="nickCanntNull">昵称不能为空</string>
     <string name="emailboxError">邮箱格式不正确</string>
